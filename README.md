@@ -1,2 +1,10 @@
 # PHP-Labyrinth-Lord-Cleric-Generator-v2
 The Labyrinth Lord Cleric Character Generator Version 2 is the second iteration of the Labyrinth Lord Cleric Character Generator, and is designed to randomly generator a character Cleric for Goblinoid Games' Labyrinth Lord role-playing system. This iteration of the Labyrinth Lord character generator features new option for customizing the randomly generated character.
+
+
+------------------
+
+
+Initial commit: 2022-06-29
+
+The initial commit for the Cleric Character Generator Version 2.
