@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Labyrinth Lord Fighter Character Generator Version 2</title>
+<title>Labyrinth Lord Cleric Character Generator Version 2</title>
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 	<meta charset="UTF-8">
-	<meta name="description" content="Dungeon Crawl Classics Fighter Character Generator..">
+	<meta name="description" content="Dungeon Crawl Classics Cleric Character Generator..">
 	<meta name="keywords" content="Dungeon Crawl Classics,,HTML5,CSS,JavaScript">
 	<meta name="author" content="Mark Tasaka 2022">
     
     <link rel="icon" href="../../../../images/favicon/icon.png" type="image/png" sizes="16x16"> 
 		
 
-	<link rel="stylesheet" type="text/css" href="css/fighter.css">
+	<link rel="stylesheet" type="text/css" href="css/cleric.css">
     
     
     
@@ -35,8 +35,8 @@
     include 'php/wealth.php';
     include 'php/nameSelect.php';
     include 'php/gender.php';
-    include 'php/languages.php';
     include 'php/movementRate.php';
+    include 'php/spells.php';
     
 
 
@@ -124,14 +124,7 @@
         
         $xpNextLevel = getXPNextLevel ($level);
         
-        /*
-        if(isset($_POST["theAbilityScore"]))
-        {
-            $abilityScoreGen = $_POST["theAbilityScore"];
-        
-        }*/
-        
-        
+
         if(isset($_POST["theWealth"]))
         {
             $wealthOption = $_POST["theWealth"];
@@ -280,10 +273,6 @@
 
        $totalAcDefense = $armourACBonus + $shieldACBonus;
 
-
-       //$speed = 30;
-
-
        $baseArmourClass = 9 - $dexterityMod;
 
        $armourClass = $baseArmourClass + $totalAcDefense;
@@ -397,8 +386,8 @@
         $saveSpells = saveSpells($level);
         $saveSpells -= $wisdomMod;
 
-        $primeReq = primeReq($strength);
-        $secondAttack = secondAttack($level);
+        $primeReq = primeReq($wisdom);
+        //$secondAttack = secondAttack($level);
 
         $strengthDescription = strengthModifierDescription($strength);
         $dexterityDescription = dexterityModifierDescription($dexterity);
@@ -446,6 +435,8 @@
         $missileHitAC8 = getThacoCheck($missileHitAC8);
         $missileHitAC9 = $missileHitAC0  - 9;
         $missileHitAC9 = getThacoCheck($missileHitAC9);
+
+        $level1Spells = spellsLevel1($level);
     
     
     ?>
@@ -680,7 +671,7 @@
        
        
        
-       <span id="class">Fighter</span>
+       <span id="class">Cleric</span>
        
        <span id="armourClass">
            <?php
@@ -973,11 +964,15 @@
         <span id="classAbilities">
             <?php
                 echo $primeReq;
-                echo $secondAttack;
             ?>
         </span>
 
         
+        <span id="level1Spells">
+            <?php
+                echo $level1Spells;
+            ?>
+        </span>
         
        
 
@@ -990,7 +985,7 @@
       
 
   
-       let imgData = "images/fighter.png";
+       let imgData = "images/cleric.png";
       
         $("#character_sheet").attr("src", imgData);
       

@@ -122,12 +122,12 @@ function weaponNotes($value)
     function getRandomWeapons()
     {
        
-        $weaponsArray = array(0, 1, 2, 3, 4, 5, 8, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34);
+        $weaponsArray = array(2, 14, 15, 20, 25, 28);
     
         //shuffle $weaponsArray
         shuffle($weaponsArray); 
     
-        $numberOfWeapons = rand (2, 8);
+        $numberOfWeapons = rand (2, 4);
     
         $weaponsHas = array();
     

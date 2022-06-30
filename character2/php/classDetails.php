@@ -1,6 +1,6 @@
 <?php
 
-/*Fighter */
+/*Cleric */
 
 function getHitPoints($level, $conMod)
 {
@@ -10,7 +10,7 @@ function getHitPoints($level, $conMod)
     {
         for($i = 0; $i < $level; ++$i)
         {
-            $levelHP = rand(3, 8);
+            $levelHP = rand(3, 6);
             $levelHP += $conMod;
     
             if($levelHP < 3)
@@ -26,7 +26,7 @@ function getHitPoints($level, $conMod)
     {
         for($i = 0; $i < 10; ++$i)
         {
-            $levelHP = rand(3, 8);
+            $levelHP = rand(3, 6);
             $levelHP += $conMod;
     
             if($levelHP < 3)
@@ -38,7 +38,7 @@ function getHitPoints($level, $conMod)
     
         }
 
-        $levelTenPlusHP = ($level - 9) * 2;
+        $levelTenPlusHP = ($level - 9);
 
         $hitPoints += $levelTenPlusHP;
 
@@ -52,29 +52,25 @@ function getHitPoints($level, $conMod)
 
 function saveBreathAttack($level)
 {
-    if($level <= 3)
+    if($level <= 4)
     {
-        return 15;
+        return 16;
     }
-    else if($level >= 4 && $level <= 6)
+    else if($level >= 5 && $level <= 8)
     {
-        return 13;
+        return 14;
     }
-    else if($level >= 7 && $level <= 9)
+    else if($level >= 9 && $level <= 12)
     {
-        return 9;
+        return 12;
     }
-    else if($level >= 10 && $level <= 12)
+    else if($level >= 13 && $level <= 16)
     {
-        return 7;
-    }
-    else if($level >= 13 && $level <= 15)
-    {
-        return 5;
+        return 8;
     }
     else
     {
-        return 4;
+        return 6;
     }
 
 }
@@ -82,63 +78,50 @@ function saveBreathAttack($level)
 
 function savePoisonDeath($level)
 {
-    if($level <= 3)
+    if($level <= 4)
     {
-        return 12;
+        return 11;
     }
-    else if($level >= 4 && $level <= 6)
+    else if($level >= 5 && $level <= 8)
     {
-        return 10;
+        return 9;
     }
-    else if($level >= 7 && $level <= 9)
+    else if($level >= 9 && $level <= 12)
     {
-        return 8;
+        return 7;
     }
-    else if($level >= 10 && $level <= 12)
-    {
-        return 6;
-    }
-    else if($level >= 13 && $level <= 18)
-    {
-        return 4;
-    }
-    else
+    else if($level >= 13 && $level <= 16)
     {
         return 3;
     }
-
+    else
+    {
+        return 2;
+    }
 }
 
 
 function savePetrify($level)
 {
-    if($level <= 3)
+    if($level <= 4)
     {
         return 14;
     }
-    else if($level >= 4 && $level <= 6)
+    else if($level >= 5 && $level <= 8)
     {
         return 12;
     }
-    else if($level >= 7 && $level <= 9)
+    else if($level >= 9 && $level <= 12)
     {
         return 10;
     }
-    else if($level >= 10 && $level <= 12)
+    else if($level >= 13 && $level <= 16)
     {
         return 8;
     }
-    else if($level >= 13 && $level <= 15)
-    {
-        return 6;
-    }
-    else if($level >= 16 && $level <= 18)
-    {
-        return 5;
-    }
     else
     {
-        return 4;
+        return 6;
     }
 
 }
@@ -146,33 +129,25 @@ function savePetrify($level)
 
 function saveWands($level)
 {
-    if($level <= 3)
+    if($level <= 4)
     {
-        return 13;
+        return 12;
     }
-    else if($level >= 4 && $level <= 6)
+    else if($level >= 5 && $level <= 8)
     {
-        return 11;
+        return 10;
     }
-    else if($level >= 7 && $level <= 9)
+    else if($level >= 9 && $level <= 12)
     {
-        return 9;
+        return 8;
     }
-    else if($level >= 10 && $level <= 12)
-    {
-        return 7;
-    }
-    else if($level >= 13 && $level <= 15)
-    {
-        return 5;
-    }
-    else if($level >= 16 && $level <= 18)
+    else if($level >= 13 && $level <= 16)
     {
         return 4;
     }
     else
     {
-        return 3;
+        return 4;
     }
 
 }
@@ -180,33 +155,25 @@ function saveWands($level)
 
 function saveSpells($level)
 {
-    if($level <= 3)
+    if($level <= 4)
     {
-        return 16;
+        return 15;
     }
-    else if($level >= 4 && $level <= 6)
-    {
-        return 14;
-    }
-    else if($level >= 7 && $level <= 9)
+    else if($level >= 5 && $level <= 8)
     {
         return 12;
     }
-    else if($level >= 10 && $level <= 12)
+    else if($level >= 9 && $level <= 12)
     {
-        return 10;
+        return 9;
     }
-    else if($level >= 13 && $level <= 15)
+    else if($level >= 13 && $level <= 16)
     {
-        return 8;
-    }
-    else if($level >= 16 && $level <= 18)
-    {
-        return 7;
+        return 6;
     }
     else
     {
-        return 6;
+        return 5;
     }
 
 }
@@ -455,69 +422,45 @@ function charismaModifierDescription($abilityScore)
 
 function getThaco($level, $abiltyMod)
 {
-    if($level == 1 || $level == 2)
+    if($level == 1 || $level == 2 || $level == 2)
     {
         $thaco = 19;
     }
-    else if($level == 3)    
+    else if($level == 4 || $level == 5)    
     {
         $thaco = 18;
     }
-    else if($level == 4)    
+    else if($level == 6 || $level == 7 || $level == 8)    
     {
         $thaco = 17;
     }
-    else if($level == 5)    
+    else if($level == 9 || $level == 10)    
     {
         $thaco = 16;
     }
-    else if($level == 6)    
+    else if($level == 11)    
     {
         $thaco = 15;
     }
-    else if($level == 7 || $level == 8)    
+    else if($level == 12)    
     {
         $thaco = 14;
     }
-    else if($level == 9)    
+    else if($level == 13 || $level == 14)    
     {
         $thaco = 13;
     }
-    else if($level == 10 || $level == 11)    
+    else if($level == 15 || $level == 16)    
     {
         $thaco = 12;
     }
-    else if($level == 12)    
+    else if($level == 17 || $level == 18)    
     {
         $thaco = 11;
     }
-    else if($level == 13)    
-    {
-        $thaco = 10;
-    }
-    else if($level == 14)    
-    {
-        $thaco = 9;
-    }
-    else if($level == 15)    
-    {
-        $thaco = 8;
-    }
-    else if($level == 16)    
-    {
-        $thaco = 7;
-    }
-    else if($level == 17)    
-    {
-        $thaco = 6;
-    }
-    else if($level == 18)    
-    {
-        $thaco = 5;
-    }
     else
     {
-        $thaco = 4;
+        $thaco = 10;
     }
 
     $thaco -= $abiltyMod;
