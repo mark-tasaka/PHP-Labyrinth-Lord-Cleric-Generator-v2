@@ -5,6 +5,13 @@ The Labyrinth Lord Cleric Character Generator Version 2 is the second iteration 
 ------------------
 
 
+
+Updat 1.01: 2022-06-30
+
+Updates to cleric.php, cleric.css, classDetails.php, gear.php, weapons.php, and xp.php.  Deleted lanuages.php, and added new file: spells.php.
+
+
+
 Initial commit: 2022-06-29
 
 The initial commit for the Cleric Character Generator Version 2.
