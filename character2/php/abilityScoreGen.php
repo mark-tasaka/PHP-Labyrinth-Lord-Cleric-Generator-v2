@@ -181,13 +181,13 @@ function generationMesssage ($abilityScore)
     
     if($abilityScore == 4)
     {
-        $message = "Ability Score Generation: 2d6 + 6;";
+        $message = "Ability Score Generation: 2d6+6;";
     }
     
     
     if($abilityScore == 5)
     {
-        $message = "Ability Score Generation: 1d6 + 12;";
+        $message = "Ability Score Generation: 1d6+12;";
     }
     
     return $message;

@@ -561,6 +561,119 @@ body{
 }
 
 
+#level2Spells{
+    position:absolute;
+    top: 940px;
+    left: 278px;
+	font-size: 1em;
+}
+
+
+#level3Spells{
+    position:absolute;
+    top: 940px;
+    left: 328px;
+	font-size: 1em;
+}
+
+#level4Spells{
+    position:absolute;
+    top: 940px;
+    left: 378px;
+	font-size: 1em;
+}
+
+#level5Spells{
+    position:absolute;
+    top: 940px;
+    left: 428px;
+	font-size: 1em;
+}
+
+#level6Spells{
+    position:absolute;
+    top: 940px;
+    left: 478px;
+	font-size: 1em;
+}
+
+#level7Spells{
+    position:absolute;
+    top: 940px;
+    left: 528px;
+	font-size: 1em;
+}
+
+#turnUndeadHD1{
+    position:absolute;
+    top: 1019px;
+    left: 188px;
+	font-size: 1em;
+}
+
+
+#turnUndeadHD2{
+    position:absolute;
+    top: 1019px;
+    left: 231px;
+	font-size: 1em;
+}
+
+#turnUndeadHD3{
+    position:absolute;
+    top: 1019px;
+    left: 276px;
+	font-size: 1em;
+}
+
+#turnUndeadHD4{
+    position:absolute;
+    top: 1019px;
+    left: 323px;
+	font-size: 1em;
+}
+
+#turnUndeadHD5{
+    position:absolute;
+    top: 1019px;
+    left: 365px;
+	font-size: 1em;
+}
+
+#turnUndeadHD6{
+    position:absolute;
+    top: 1019px;
+    left: 411px;
+	font-size: 1em;
+}
+
+#turnUndeadHD7{
+    position:absolute;
+    top: 1019px;
+    left: 454px;
+	font-size: 1em;
+}
+
+#turnUndeadHD8{
+    position:absolute;
+    top: 1019px;
+    left: 496px;
+	font-size: 1em;
+}
+
+#turnUndeadHD9{
+    position:absolute;
+    top: 1019px;
+    left: 548px;
+	font-size: 1em;
+}
+
+#turnUndeadHD10{
+    position:absolute;
+    top: 1019px;
+    left: 593px;
+	font-size: 1em;
+}
 
 #saveBreath{
     position:absolute;

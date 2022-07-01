@@ -37,6 +37,7 @@
     include 'php/gender.php';
     include 'php/movementRate.php';
     include 'php/spells.php';
+    include 'php/turnUndead.php';
     
 
 
@@ -437,6 +438,23 @@
         $missileHitAC9 = getThacoCheck($missileHitAC9);
 
         $level1Spells = spellsLevel1($level);
+        $level2Spells = spellsLevel2($level);
+        $level3Spells = spellsLevel3($level);
+        $level4Spells = spellsLevel4($level);
+        $level5Spells = spellsLevel5($level);
+        $level6Spells = spellsLevel6($level);
+        $level7Spells = spellsLevel7($level);
+
+        $turnUndeadHD1 = undeadHD1($level);
+        $turnUndeadHD2 = undeadHD2($level);
+        $turnUndeadHD3 = undeadHD3($level);
+        $turnUndeadHD4 = undeadHD4($level);
+        $turnUndeadHD5 = undeadHD5($level);
+        $turnUndeadHD6 = undeadHD6($level);
+        $turnUndeadHD7 = undeadHD7($level);
+        $turnUndeadHD8 = undeadHD8($level);
+        $turnUndeadHD9 = undeadHD9($level);
+        $turnUndeadHD10 = undeadHD10($level);
     
     
     ?>
@@ -974,7 +992,106 @@
             ?>
         </span>
         
-       
+        <span id="level2Spells">
+            <?php
+                echo $level2Spells;
+            ?>
+        </span>
+        
+        <span id="level3Spells">
+            <?php
+                echo $level3Spells;
+            ?>
+        </span>
+        
+        <span id="level4Spells">
+            <?php
+                echo $level4Spells;
+            ?>
+        </span>
+        
+        <span id="level5Spells">
+            <?php
+                echo $level5Spells;
+            ?>
+        </span>
+        
+        <span id="level6Spells">
+            <?php
+                echo $level6Spells;
+            ?>
+        </span>
+        
+        <span id="level7Spells">
+            <?php
+                echo $level7Spells;
+            ?>
+        </span>
+        
+        
+        <span id="turnUndeadHD1">
+            <?php
+                echo $turnUndeadHD1;
+            ?>
+        </span>
+
+        
+        <span id="turnUndeadHD2">
+            <?php
+                echo $turnUndeadHD2;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD3">
+            <?php
+                echo $turnUndeadHD3;
+            ?>
+        </span>
+
+        
+        <span id="turnUndeadHD4">
+            <?php
+                echo $turnUndeadHD4;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD5">
+            <?php
+                echo $turnUndeadHD5;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD6">
+            <?php
+                echo $turnUndeadHD6;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD7">
+            <?php
+                echo $turnUndeadHD7;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD8">
+            <?php
+                echo $turnUndeadHD8;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD9">
+            <?php
+                echo $turnUndeadHD9;
+            ?>
+        </span>
+        
+        <span id="turnUndeadHD10">
+            <?php
+                echo $turnUndeadHD10;
+            ?>
+        </span>
+
+
 
        
 	</section>
