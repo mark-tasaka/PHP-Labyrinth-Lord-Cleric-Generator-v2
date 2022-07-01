@@ -4,6 +4,20 @@ The Labyrinth Lord Cleric Character Generator Version 2 is the second iteration 
 
 ------------------
 
+A live version for the Labyrinth Lord Cleric Character Generator Version 2 is available at:
+
+https://www.oldschooladventures.org/ll/classes/cleric/
+
+
+------------
+
+
+
+
+Updat 1.02: 2022-07-01
+
+Updates to cleric.php, cleric.css, abilityScoresGen.php, gear.php, and spells.php.  New file, turnUndead.php, added.  A link to the live version of the Cleric Character Generator Version 2 added.
+
 
 
 Updat 1.01: 2022-06-30
